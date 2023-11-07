@@ -1,0 +1,14 @@
+---
+- name: configure the tags
+  hosts: dev
+  tasks:
+    - name: set alpha content
+      ansible.builtin.copy:
+        content: "Welcome to alpha content"
+        dest: /var/www/html/index.html
+      tags: [never,alpha]
+    - name: set beta content
+      ansible.builtin.copy:
+        content: "Welcome to beta content"
+        dest: /var/www/html/index.html
+      tags: [never,beta]
