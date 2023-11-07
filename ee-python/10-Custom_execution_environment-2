@@ -1,0 +1,7 @@
+Create a Custom execution environment-2
+ - Create execution environment named as “ee-python-environment:1.0”
+ - The image supports the base image of “ee-supported-rhel8:latest”
+ - Use The following builder image  “ansible-builder-rhel8:latest”
+ - The environment requires the python packages python36 and python3-ldap as dependent.
+ - Upload the image to hub.lab.example.com.
+

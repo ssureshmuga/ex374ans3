@@ -1,0 +1,7 @@
+Create a custom execution environment -1
+           - Create execution environment named as “ee-user-environment:2.0”
+           - The image supports the Base image of “ee-minimal-rhel8:latest”
+           - Use The following builder image  “ansible-builder-rhel8:latest”
+           - it should contains the collection rhel.user earlier configured.
+Upload the image to hub.lab.example.com.
+

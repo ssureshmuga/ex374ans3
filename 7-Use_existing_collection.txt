@@ -1,0 +1,1 @@
+Install the “ansible.netcommon.tar.gz” collection in your machine from hub.lab.example.com on the /home/student/mycollections

@@ -1,0 +1,6 @@
+---
+# tasks file for newuser
+- name: copy the content from motd
+  ansible.builtin.template:
+    src: motd.j2
+    dest: /etc/motd
