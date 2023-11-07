@@ -1,0 +1,15 @@
+---
+- name: create users on managed hosts
+  hosts: dev
+  vars_files:
+    - user_list.yml
+  tasks:
+    - vars:
+        password: "{{ lookup('password', 'password-' + item.name +' length=6') }}"
+      ansible.builtin.user:
+        name: "{{ item.name }}"
+        state: present
+        uid: "{{ item.uid }}"
+        password: "{{ password | password_hash('sha256','salt') }}"
+        comment: "{{ item.first | capitalize+' '+item.middle | capitalize+' '+item.last | capitalize }}"
+      loop: "{{ users }}"
